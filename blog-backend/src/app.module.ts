@@ -10,9 +10,9 @@ import { PostsModule } from './posts/posts.module';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: 'yourpassword',
-      database: 'blogdb',
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      password: '1234',
+      database: 'blog',
+      autoLoadEntities:true,
       synchronize: true, // Set to false in production
     }),
     PostsModule,

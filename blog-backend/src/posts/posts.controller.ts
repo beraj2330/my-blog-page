@@ -1,7 +1,3 @@
-import { Controller } from '@nestjs/common';
-
-@Controller('posts')
-export class PostsController {}
 // /src/posts/posts.controller.ts
 import { Controller, Get, Param } from '@nestjs/common';
 import { PostsService } from './posts.service';
