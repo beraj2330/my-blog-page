@@ -1,0 +1,59 @@
+/* /styles/PostDetail.module.css */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .meta {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  .content {
+    margin-top: 20px;
+  }
+  
+  .actions {
+    margin-top: 20px;
+  }
+  
+  .likeButton, .shareButton {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    background-color: #0070f3;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .likeButton:hover, .shareButton:hover {
+    opacity: 0.8;
+  }
+  
+  .tags {
+    margin-top: 20px;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: #e1e1e1;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .comments {
+    margin-top: 40px;
+  }
+  
