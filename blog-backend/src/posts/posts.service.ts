@@ -18,8 +18,8 @@ export class PostsService {
 
   // Fetch single post by ID
   async findOne(id: number): Promise<Post> {
-    return this.postsRepository.findOne(id);
+    return this.postsRepository.findOne({
+      where: { id }, // Pass ID in the `where` condition
+    });
   }
-
-  // Optionally, add methods for creating, updating, and deleting posts.
 }
