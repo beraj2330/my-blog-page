@@ -15,7 +15,7 @@ export class post {
   @Column()
   author: string;
 
-  @Column()
+  @Column({ default: () => 'CURRENT_TIMESTAMP' })
   date: string;
 
   @Column('int', { default: 0 })
