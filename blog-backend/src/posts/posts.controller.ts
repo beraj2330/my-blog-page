@@ -1,7 +1,8 @@
 // /src/posts/posts.controller.ts
-import { Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post} from '@nestjs/common';
 import { PostsService } from './posts.service';
-import { Post } from './post.entity';
+import { CreatePostDto } from './create-post.dto';
+import { post } from './post.entity';
 
 @Controller('posts')
 export class PostsController {
@@ -9,13 +10,18 @@ export class PostsController {
 
   // Get all posts
   @Get()
-  async findAll(): Promise<Post[]> {
+  async findAll(): Promise<post[]> {
     return this.postsService.findAll();
   }
 
   // Get a single post by ID
   @Get(':id')
-  async findOne(@Param('id') id: number): Promise<Post> {
+  async findOne(@Param('id') id: number): Promise<post> {
     return this.postsService.findOne(id);
+  }
+
+  @Post()
+  async createPost(@Body() createPostDto: CreatePostDto) {
+    return this.postsService.create(createPostDto);
   }
 }
