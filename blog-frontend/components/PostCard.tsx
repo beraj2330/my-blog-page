@@ -1,3 +1,4 @@
+// /components/PostCard.tsx
 import Link from 'next/link';
 import styles from './PostCard.module.css';
 

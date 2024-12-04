@@ -54,7 +54,7 @@ const PostDetail = ({ post }: { post: Post }) => {
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { id } = params as { id: string }; // Type assertion to ensure 'id' is treated as a string
 
-  const response = await axios.get(`http://localhost:5000/posts/${id}`);
+  const response = await axios.get(`http://localhost:3000/posts/${id}`);
   const post = response.data;
 
   return {

@@ -21,11 +21,9 @@ const Home = ({ posts }: { posts: Post[] }) => {
         {posts.map((post) => (
           <div key={post.id} className={styles.post}>
             <Link href={`/posts/${post.id}`}>
-              <a>
                 <h2>{post.title}</h2>
                 <p>{post.content}</p>
                 <small>By {post.author} on {post.date}</small>
-              </a>
             </Link>
           </div>
         ))}
@@ -35,7 +33,7 @@ const Home = ({ posts }: { posts: Post[] }) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await axios.get('http://localhost:5000/posts');
+  const response = await axios.get('http://localhost:3000/posts'); // Ensure the backend endpoint is correct
   const posts = response.data;
 
   return {
