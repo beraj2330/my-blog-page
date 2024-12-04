@@ -30,4 +30,15 @@ export class PostsService {
     });
     return this.postsRepository.save(newPost);
   }
+
+  // Update likes count
+  async updateLikes(id: number): Promise<post> {
+    const post = await this.postsRepository.findOne({ where: { id } });
+    if (!post) {
+      throw new NotFoundException(`Post with id ${id} not found`);
+    }
+
+    post.likes += 1; // Increment the like count
+    return this.postsRepository.save(post); // Save updated post
+  }
 }

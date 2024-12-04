@@ -24,4 +24,9 @@ export class PostsController {
   async createPost(@Body() createPostDto: CreatePostDto) {
     return this.postsService.create(createPostDto);
   }
+
+  @Post(':id/like')
+  async likePost(@Param('id') id: number) {
+    return this.postsService.updateLikes(id); // Update the like count
+  }
 }
