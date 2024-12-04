@@ -38,7 +38,6 @@ const PostDetail = ({ post }: { post: Post }) => {
         </div>
         <div className={styles.actions}>
           <button onClick={handleLike} className={styles.likeButton}>Like</button>
-          <button className={styles.shareButton}>Share</button>
         </div>
         <div className={styles.tags}>
           {post.tags.map((tag, index) => (
