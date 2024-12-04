@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar';
 import axios from 'axios';
 import { useState } from 'react';
 import styles from '../../styles/PostDetail.module.css';
+import Comments from '@/components/Comments';
 
 interface Post {
   id: number;
@@ -26,6 +27,7 @@ const PostDetail = ({ post }: { post: Post }) => {
   return (
     <div>
       <Navbar />
+      
       <div className={styles.container}>
         <h1 className={styles.title}>{post.title}</h1>
         <div className={styles.meta}>
@@ -45,6 +47,7 @@ const PostDetail = ({ post }: { post: Post }) => {
           ))}
         </div>
       </div>
+      <Comments postId={post.id} />
     </div>
   );
 };

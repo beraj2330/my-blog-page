@@ -1,5 +1,5 @@
-// /src/posts/post.entity.ts
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { Comment } from '../comments/comment.entity';
 
 @Entity()
 export class post {
@@ -26,4 +26,7 @@ export class post {
 
   @Column('text', { array: true, default: [] })
   tags: string[];
+
+  @OneToMany(() => Comment, (comment) => comment.post)
+  comments: Comment[];
 }
