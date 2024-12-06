@@ -1,3 +1,4 @@
+// /pages/about.tsx
 import Navbar from '../components/Navbar';
 import styles from '../styles/About.module.css';
 

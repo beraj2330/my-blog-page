@@ -1,3 +1,4 @@
+// /components/Comments.tsx
 import { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "../styles/Comments.module.css";  // Adjusted path
