@@ -1,3 +1,4 @@
+// /comments/comments.entity.ts
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
 import { post } from '../posts/post.entity';
 
